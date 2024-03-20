@@ -17,12 +17,13 @@ namespace CalculatorApp
         }
 
         private string currentValue = "0";
-        private string previousValue = "";
         public double savedValue = 0;
 
         private bool isNewValue;
         private Operation currentOperation;
         const int TEXTBOX_LENGTH = 20;
+        // Form1クラス内のフィールドとしてCalculatorのインスタンスを追加
+        private Calculator calculator = new Calculator();
 
         public Form1()
         {
@@ -118,28 +119,19 @@ namespace CalculatorApp
         private void PerformCalculation()
         {
             double currentValue = double.Parse(textBox1.Text);
-            //Console.WriteLine("savedValue");
-            //Console.WriteLine(savedValue);
-            //Console.WriteLine("currentValue");
-            //Console.WriteLine(currentValue);
             switch (currentOperation)
             {
                 case Operation.Addition:
-                    savedValue += currentValue;
+                    savedValue = calculator.Add(savedValue, currentValue);
                     break;
                 case Operation.Subtraction:
-                    savedValue -= currentValue;
+                    savedValue = calculator.Subtract(savedValue, currentValue);
                     break;
                 case Operation.Multiplication:
-                    savedValue *= currentValue;
+                    savedValue = calculator.Multiply(savedValue, currentValue);
                     break;
                 case Operation.Division:
-                    if (currentValue == 0)
-                    {
-                        MessageBox.Show("ゼロで割ることはできません。"); // ゼロ除算の処理
-                        return;
-                    }
-                    savedValue /= currentValue;
+                    savedValue = calculator.Divide(savedValue, currentValue);
                     break;
                 case Operation.None:
                     savedValue = currentValue;
