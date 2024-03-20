@@ -235,6 +235,7 @@
             button16.TabIndex = 17;
             button16.Text = "×";
             button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click;
             // 
             // button17
             // 
@@ -245,6 +246,7 @@
             button17.TabIndex = 16;
             button17.Text = "C";
             button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
             // 
             // button18
             // 
@@ -255,6 +257,7 @@
             button18.TabIndex = 18;
             button18.Text = "+";
             button18.UseVisualStyleBackColor = true;
+            button18.Click += button18_Click;
             // 
             // button19
             // 
@@ -265,6 +268,7 @@
             button19.TabIndex = 22;
             button19.Text = "=";
             button19.UseVisualStyleBackColor = true;
+            button19.Click += button19_Click;
             // 
             // button20
             // 
@@ -286,6 +290,7 @@
             button21.TabIndex = 20;
             button21.Text = "÷";
             button21.UseVisualStyleBackColor = true;
+            button21.Click += button21_Click;
             // 
             // button22
             // 
@@ -296,6 +301,7 @@
             button22.TabIndex = 19;
             button22.Text = "AC";
             button22.UseVisualStyleBackColor = true;
+            button22.Click += button22_Click;
             // 
             // Form1
             // 
