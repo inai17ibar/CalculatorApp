@@ -60,6 +60,9 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(424, 34);
             textBox1.TabIndex = 0;
+            textBox1.Text = "0";
+            textBox1.TextAlign = HorizontalAlignment.Right;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
